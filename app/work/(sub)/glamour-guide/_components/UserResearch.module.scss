@@ -1,0 +1,14 @@
+.Container {
+  padding: 80px 16px;
+  // padding-bottom: 100px;
+
+  p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+
+.Grid {
+  flex: 1;
+  flex-shrink: 0;
+}
