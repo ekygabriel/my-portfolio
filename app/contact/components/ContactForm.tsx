@@ -74,7 +74,8 @@ const ContactForm = () => {
       )}
       {Notification.type === "error" && (
         <ErrorToast
-          message={Notification?.message}
+          message="Message not sent! Please check the fields and try again."
+          // message={Notification?.message}
           close={() => setNotification(defaultNotification)}
         />
       )}

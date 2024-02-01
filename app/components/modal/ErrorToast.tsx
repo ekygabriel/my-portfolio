@@ -14,7 +14,7 @@ const ErrorToast = ({
   useEffect(() => {
     let timer = setTimeout(() => {
       close();
-    }, 70000);
+    }, 7000);
 
     return () => {
       clearTimeout(timer);
