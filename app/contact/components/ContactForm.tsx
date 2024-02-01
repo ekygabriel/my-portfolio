@@ -64,7 +64,7 @@ const ContactForm = () => {
       )}
       <div className="flex justify-end mt-10">
         <div className="md:hidden">
-          <BackButton className="ml-0" />
+          <BackButton className="!ml-0" />
         </div>
         <SubmitButton />
       </div>

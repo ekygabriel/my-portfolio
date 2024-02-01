@@ -20,7 +20,7 @@ const SubmitButton = () => {
           : {}
       }
     >
-      {pending ? "Please wait ..." : "Submit"}
+      {pending ? "Loading ..." : "Submit"}
     </button>
   );
 };
