@@ -22,7 +22,7 @@ const ErrorToast = ({
   }, []);
 
   return (
-    <div className="fixed flex flex-col gap-2 items-center justify-center top-[70px] max-w-[350px] min-w-[250px] p-2 text-center right-4 bg-[#fee2e2] text-[#991b1b] z-50 pt-6 rounded-2xl">
+    <div className="fixed flex flex-col gap-2 items-center justify-center top-[70px] max-w-[300px] min-w-[250px] p-2 text-center right-0 bg-[#fee2e2] text-[#991b1b] z-50 pt-6 rounded-md">
       <IoCloseCircleSharp
         className="cursor-pointer text-[#991b1b] text-4xl"
         onClick={close}

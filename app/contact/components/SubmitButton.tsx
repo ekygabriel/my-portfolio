@@ -11,7 +11,7 @@ const SubmitButton = () => {
       className={
         !pending
           ? "text-black font-semibold bg-yellow-500 px-6 py-3 ml-auto rounded-3xl inline-block w-max hover:bg-black hover:text-yellow-500 transition"
-          : "bg-[#e5e5e5] cursor-not-allowed font-semibold px-6 py-3 rounded-3xl"
+          : "bg-[#e5e5e5] cursor-not-allowed font-semibold px-6 py-3 rounded-3xl  ml-auto"
       }
       disabled={pending}
       style={
@@ -20,7 +20,7 @@ const SubmitButton = () => {
           : {}
       }
     >
-      {pending ? "Loading ..." : "Submit"}
+      {pending ? "Loading" : "Submit"}
     </button>
   );
 };
