@@ -1,5 +1,5 @@
 import Footer from "../components/footer/Footer";
-import NotificationModal from "../components/modal/NotificationModal";
+// import NotificationModal from "../components/modal/NotificationModal";
 import BackButton from "./components/BackButton";
 import ContactForm from "./components/ContactForm";
 
@@ -29,7 +29,6 @@ const ContactPage = () => {
           <ContactForm />
         </div>
       </div>
-      <NotificationModal />
       <Footer />
     </>
   );

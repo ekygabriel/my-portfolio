@@ -1,29 +1,60 @@
-import React from "react";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { useFormStatus } from "react-dom";
 import ContactInput from "./ContactInput";
 import BackButton from "./BackButton";
 import ContactTextArea from "./ContactTextArea";
+import { submitForm } from "@/app/actions";
+import SubmitButton from "./SubmitButton";
+import NotificationModal from "@/app/components/modal/NotificationModal";
+import ErrorToast from "@/app/components/modal/ErrorToast";
 
 const formData = [
   {
-    name: "Name",
+    name: "name",
     label: "Name",
+    type: "text",
   },
   {
     name: "phone",
     label: "Phone Number",
+    type: "tel",
   },
   {
     name: "email",
     label: "Email Address",
+    type: "email",
   },
   {
     name: "message",
     label: "Leave Your Message",
+    type: "text",
   },
 ];
+
 const ContactForm = () => {
+  const ref = useRef<HTMLFormElement>(null);
+  const defaultNotification = { type: "", message: "" };
+  const [Notification, setNotification] = useState(defaultNotification);
+
+  const handleSubmit = async (formData: FormData) => {
+    try {
+      const res: any = await submitForm(formData);
+      if (res?.response?.includes("OK")) {
+        setNotification({ type: "success", message: "" });
+        ref?.current?.reset();
+      }
+    } catch (err: any) {
+      setNotification({
+        type: "error",
+        message: err.message || "Unable to send message. Please try later.",
+      });
+    }
+  };
+
   return (
-    <form action="#">
+    <form action={handleSubmit} ref={ref}>
       {formData.map((item) =>
         item.name !== "message" ? (
           <ContactInput key={item.name} {...item} />
@@ -33,16 +64,20 @@ const ContactForm = () => {
       )}
       <div className="flex justify-end mt-10">
         <div className="md:hidden">
-          <BackButton />
+          <BackButton className="ml-0" />
         </div>
-        <button
-          type="submit"
-          className="text-black font-semibold bg-yellow-500 px-6 py-3 ml-auto rounded-3xl inline-block w-max hover:bg-black hover:text-yellow-500 transition"
-          style={{ boxShadow: "0px 4px 28.8px 0px rgba(255, 193, 7, 0.36)" }}
-        >
-          Submit
-        </button>
+        <SubmitButton />
       </div>
+
+      {Notification?.type === "success" && (
+        <NotificationModal close={() => setNotification(defaultNotification)} />
+      )}
+      {Notification.type === "error" && (
+        <ErrorToast
+          message={Notification?.message}
+          close={() => setNotification(defaultNotification)}
+        />
+      )}
     </form>
   );
 };

@@ -43,11 +43,7 @@ const SideNav = ({ ActiveLink }: { ActiveLink: string }) => {
           })}
         </ul>
       </div>
-
-      {/* {Open && (
-        <div className={classes.Backdrop} onClick={() => setOpen(false)}></div>
-      )} */}
-      {Open && <Backdrop />}
+      {Open && <Backdrop close={() => setOpen(false)} />}
     </>
   );
 };

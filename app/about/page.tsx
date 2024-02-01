@@ -123,15 +123,23 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-        <footer className="flex justify-between items-center mt-28">
-          <BackButton />
+        <footer className="flex justify-between items-center mt-28 gap-2">
+          <BackButton className="ml-0" />
           <Link
             href="ekom.pdf"
             target="_blank"
-            className="bg-yellow-500 py-3 px-6 rounded-3xl font-semibold hover:bg-black hover:text-yellow-500 transition"
+            className="bg-yellow-500 py-3 px-6 rounded-3xl font-semibold hover:bg-black hover:text-yellow-500 transition hidden sm:block"
             style={{ boxShadow: "0px 4px 28.8px 0px rgba(255, 193, 7, 0.36)" }}
           >
-            Download Resume{" "}
+            Download Resume
+          </Link>
+          <Link
+            href="ekom.pdf"
+            target="_blank"
+            className="bg-yellow-500 py-3 px-6 rounded-3xl font-semibold hover:bg-black hover:text-yellow-500 transition sm:hidden"
+            style={{ boxShadow: "0px 4px 28.8px 0px rgba(255, 193, 7, 0.36)" }}
+          >
+            Resume
           </Link>
         </footer>
       </div>

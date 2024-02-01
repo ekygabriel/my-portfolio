@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 
 import classes from "./Backdrop.module.scss";
 
-const Backdrop = () => {
+const Backdrop = ({ close }: { close: () => void }) => {
   const [IsLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Backdrop = () => {
 
   if (IsLoaded) {
     return ReactDOM.createPortal(
-      <div className={classes.Container}></div>,
+      <div className={classes.Container} onClick={close}></div>,
       document.getElementById("backdrop")!
     );
   }
