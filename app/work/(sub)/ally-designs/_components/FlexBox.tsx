@@ -12,7 +12,7 @@ const FlexBox = () => {
             Project Overview:
           </h3>
           <p>
-            A11y designs is a product designed for a nonprofit i cofounded which
+            A11y designs is a product designed for a nonprofit I cofounded which
             aims to increase the awareness of universal design amongst designers
             in Africa and eventually the world. it is an all-in-one platform
             that merges principles of universal design with the power of

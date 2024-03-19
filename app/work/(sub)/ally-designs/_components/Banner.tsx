@@ -19,11 +19,6 @@ const AllyDesignBanner = () => {
           height={300}
           alt="gadgets"
           className="w-full absolute sm:static ml-10 sm:ml-0"
-          style={
-            {
-              // marginLeft: "40px",
-            }
-          }
         />
       </div>
     </div>

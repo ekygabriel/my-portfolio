@@ -9,6 +9,17 @@ import MockUps from "./_components/MockUps";
 import PreFooter from "./_components/PreFooter";
 import AccessiblityConsideration from "./_components/AccessiblityConsideration";
 import SiteMapComponent from "./_components/SiteMap";
+import { Metadata } from "next";
+import { GlamLogo } from "@/app/assets";
+
+export const metadata: Metadata = {
+  title: "Glamour Guide",
+  description:
+    "GlamourGuide is your comprehensive online destination for makeup tutorials, beauty education, and skincare expertise.",
+  openGraph: {
+    images: [{ url: GlamLogo?.src || GlamLogo }],
+  },
+};
 
 const GlamourGuide = () => {
   return (

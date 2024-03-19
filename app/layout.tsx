@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   },
   description:
     "I'm a multifaceted designer specializing in UX, architecture, and graphics. Passionate about human-centered design, I'm on a journey to become Nigeria's top UX Designer. Explore my portfolio to see where creativity meets functionality in design.",
+  twitter: {
+    card: "summary_large_image",
+  },
+  openGraph: {
+    images: "/opengraph-image.png",
+  },
+  metadataBase: new URL("https://eua.vercel.app"),
 };
 
 export default function RootLayout({

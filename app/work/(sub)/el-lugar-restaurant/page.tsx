@@ -10,6 +10,17 @@ import DesignProcess from "./_components/DesignProcess";
 import MockUps from "./_components/MockUps";
 import Phones from "./_components/Phones";
 import ElLugarBanner from "./_components/Banner";
+import { Metadata } from "next";
+import { ElLogo } from "@/app/assets";
+
+export const metadata: Metadata = {
+  title: "El Lugar Spanish Restaurant App",
+  description:
+    "The El Lugar restaurant app is a digital platform designed to enhance the dining experience at a Spanish restaurant located in Lagos, Nigeria. This user-friendly mobile application likely offers features such as: Menu display, Online ordering, Reservation",
+  openGraph: {
+    images: [{ url: ElLogo.src }],
+  },
+};
 
 const ElLugarPage = () => {
   return (
