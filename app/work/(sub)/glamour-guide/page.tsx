@@ -13,7 +13,7 @@ import { Metadata } from "next";
 import { GlamLogo } from "@/app/assets";
 
 export const metadata: Metadata = {
-  title: "Glamour Guide",
+  title: "Glamour Guide Project",
   description:
     "GlamourGuide is your comprehensive online destination for makeup tutorials, beauty education, and skincare expertise.",
   openGraph: {
