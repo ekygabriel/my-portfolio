@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "GlamourGuide is your comprehensive online destination for makeup tutorials, beauty education, and skincare expertise.",
   openGraph: {
-    images: [{ url: GlamLogo?.src || GlamLogo }],
+    images: [{ url: GlamLogo.src }],
   },
 };
 

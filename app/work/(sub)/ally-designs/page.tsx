@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "A11y designs is a product designed for a nonprofit I cofounded which aims to increase the awareness of universal design amongst designers in Africa and eventually the world.",
   openGraph: {
-    images: [{ url: Ally?.src || Ally }],
+    images: [{ url: Ally.src }],
   },
 };
 const AllyDesignsPage = () => {
